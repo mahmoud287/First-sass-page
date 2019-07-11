@@ -1,0 +1,24 @@
+.h_wiht_border {
+  position: relative;
+  h2 {
+    text-align: center;
+    background-color: $main_color;
+    width: 250px;
+    margin: 60px auto;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 25px;
+      &:before{
+        position: absolute;
+        content: "";
+        height: 1px;
+        width: 100%;
+        background-color: $p2fontcolor;
+        left: 0;
+        top: 50%;
+        z-index: -1;
+      }
+  }
+
+}

@@ -1,0 +1,90 @@
+.header {
+  padding: 20px 0;
+  overflow: hidden;
+  border-bottom: 1px solid #E2E2E2;
+
+  .logo {
+    position: relative;
+    @media #{$minsmall} {
+      text-align: center;
+      float: none;
+      width: 100%;
+    }
+    @media #{$minmedium} {
+
+      float: $float_left;
+      width: 30%;
+      text-align: $text_left;
+    }
+
+    h2 {
+      margin-bottom: -9px;
+      color: $main_font_color;
+    }
+
+    p {
+      color: $p1fontcolor;
+    }
+
+    .menu {
+      position: absolute;
+      top: 0;
+      right: 15px;
+      display: none;
+      cursor: pointer;
+      @media #{$maxmobile} {
+        display: block;
+      }
+
+    }
+
+
+  }
+
+
+  .navbar {
+    overflow: hidden;
+    background-color: $main_color;
+    border-radius: 15px;
+    @media #{$minsmall} {
+      width: 100%;
+      float: none;
+      margin-top: 40px;
+    }
+    @media #{$minmedium} {
+      width: 70%;
+      float: $float_left;
+      margin-top: 1em;
+    }
+
+
+    li {
+      width: 20%;
+      float: $float_left;
+      font-size: 18px;
+      text-align: center;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 20px 10px;
+
+        &:hover {
+          color: rgba(240, 142, 133, 1);
+          cursor: pointer;
+        }
+      }
+    }
+
+    @media #{$maxmobile} {
+      width: 100%;
+      display: none;
+      li {
+        width: 100%;
+        display: block;
+        float: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,184 @@
+//start slider
+.slider {
+  margin-top: 50px;
+
+  blockquote {
+    font: {
+      size: 20px;
+      weight: bold;
+      style: italic;
+      family: tahoma, arial;
+    };
+    text-align: center;
+    width: 80%;
+    margin: 30px auto;
+  }
+
+  img {
+    max-width: 100%;
+    margin: 80px auto;
+  }
+
+
+  ul {
+    text-align: center;
+
+    li {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: green;
+      opacity: 0.5;
+      border-radius: 20px;
+      animation: snake 1s infinite ease-in-out;
+    }
+
+    li:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    li:nth-child(3) {
+
+      animation-delay: 0.4s;
+    }
+
+    li:nth-child(4) {
+
+      animation-delay: 0.6s;
+    }
+
+    li:nth-child(5) {
+
+      animation-delay: 0.8s;
+    }
+
+  }
+}
+
+@include Keyframe(snake) {
+  0% {
+    opacity: 0.3;
+    transform: translateY(0px);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px);
+    background: orange;
+    box-shadow: 0px 20px 3px rgba(0, 0, 0, 0.05);
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateY(0px);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+  }
+}
+
+//end slider
+//start our services
+.our_services {
+  .service-box {
+    margin: 40px auto;
+    padding-right: 20px;
+    padding-left: 20px;
+    @media #{$minmedium} {
+      float: $float_left;
+      width: (100%/3);
+    }
+
+    .service-title {
+      color: $main_font_color;
+
+      i {
+        color: black;
+        margin-right: 20px;
+        position: relative;
+        top: 6px;
+      }
+
+
+    }
+
+    .service-desc {
+      color: $p2fontcolor;
+      line-height: 1.3;
+      font-size: 17px;
+    }
+
+    .link {
+      color: $main_color;
+      text-decoration: none;
+    }
+  }
+}
+
+//end our services
+//start our palyer
+.our_players {
+  .players-box {
+    margin: 60px auto;
+    padding-right: 20px;
+    padding-left: 20px;
+    @media #{$minsmall} {
+      float: $float_left;
+      text-align: center;
+      width: (100%/2);
+    }
+    @media #{$minmedium} {
+      float: $float_left;
+      text-align: $text_left;
+      width: (100%/4);
+    }
+
+    img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 30px;
+    }
+
+    .player-name {
+      color: $p2fontcolor;
+
+      span {
+        color: $p1fontcolor;
+      }
+    }
+
+    .player-desc {
+      color: $p2fontcolor;
+      line-height: 1.3;
+      font-size: 17px;
+    }
+
+    .link {
+      color: $main_color;
+      text-decoration: none;
+    }
+  }
+}
+
+//end our player
+//<!--start LATEST WORK-->
+.LATEST_WORK {
+  .img {
+
+    margin-bottom: 50px;
+    @media #{$minsmall} {
+      width: (94%/3);
+      float: $float_left;
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 3%;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+
+  }
+
+}
+
+//<!--end LATEST WORK-->
